@@ -1,6 +1,3 @@
-if [ -f "./dev.db" ]; then
-  echo "Database file exists."
-else
-  echo "Database file is missing!"
-  exit 1
-fi
+[build]
+  command = "bash check-db.sh && npm run build"
+  publish = "build"
